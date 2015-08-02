@@ -15,7 +15,11 @@ function preload() {
 
 function create() {
     game.stage.backgroundColor = '#ccc';
+<<<<<<< HEAD
     game.physics.startSystem(Phaser.Physics.P2JS);
+=======
+    game.physics.startSystem(Phaser.Physics.ARCADE);
+>>>>>>> gh-pages
 
     bubble1 = game.add.sprite(50, game.world.height - 50, 'bubble1');
     bubble2 = game.add.sprite(200, game.world.height - 50, 'bubble2');
@@ -32,8 +36,12 @@ function create() {
     bubbles.setAll('anchor.y', 0.5);
 
     bubbles.forEach(function (bubble) {
+<<<<<<< HEAD
         game.physics.p2.enable(bubble);
         //        game.physics.arcade.enable(bubble);
+=======
+        game.physics.arcade.enable(bubble);
+>>>>>>> gh-pages
         bubble.body.collideWorldBounds = true;
         bubble.body.bounce.set(1);
     });
